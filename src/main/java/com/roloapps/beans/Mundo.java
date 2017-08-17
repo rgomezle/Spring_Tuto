@@ -1,7 +1,9 @@
 package com.roloapps.beans;
+import org.springframework.beans.factory.annotation.Value;
 
 public class Mundo {
 
+@Value("Testing_One")	
 private String First;
 
 public String getFirst() {
