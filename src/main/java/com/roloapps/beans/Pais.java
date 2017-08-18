@@ -1,10 +1,11 @@
 package com.roloapps.beans;
 
+import java.util.List;
+
 public class Pais {
 
 	private String nombre;
-	private Ciudad ciudad;
-
+	private List<Ciudad>ciudades;
 
 	public String getNombre() {
 		return nombre;
@@ -14,13 +15,13 @@ public class Pais {
 		this.nombre = nombre;
 	}
 
-	public Ciudad getCiudad() {
-		return ciudad;
+	public List<Ciudad> getCiudades() {
+		return ciudades;
 	}
 
-	public void setCiudad(Ciudad ciudad) {
-		this.ciudad = ciudad;
+	public void setCiudades(List<Ciudad> ciudades) {
+		this.ciudades = ciudades;
 	}
 
-	
+
 }

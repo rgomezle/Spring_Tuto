@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
+import com.roloapps.beans.Ciudad;
 import com.roloapps.beans.AppConfig;
 import com.roloapps.beans.Mundo;
 import com.roloapps.beans.Persona;
@@ -13,12 +13,18 @@ public class App {
 
 	public static void main(String[] args) {
 		
+		String NombreCiudades = "";
 		
 		ApplicationContext AppContext = new ClassPathXmlApplicationContext("com/roloapps/xml/beans.xml");
-		Persona per = (Persona) AppContext.getBean("persona");		
+		Persona per = (Persona) AppContext.getBean("persona");	
+		
+		for(Ciudad ciu : per.getPais().getCiudades()){
+			NombreCiudades += ciu.getNombre() +" - "; 
+		}
+		
 		((ConfigurableApplicationContext)AppContext).close();
 		System.out.println(per.getId()+" "+per.getNombre()+" "+
-		per.getApodo()+" "+per.getPais().getNombre()+" "+per.getPais().getCiudad().getNombre());
+		per.getApodo()+" "+per.getPais().getNombre()+" "+NombreCiudades);
 		
 		/*
 		ApplicationContext AppContext = new ClassPathXmlApplicationContext("com/roloapps/xml/beans.xml");

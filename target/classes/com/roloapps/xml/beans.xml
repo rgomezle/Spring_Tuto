@@ -26,13 +26,25 @@
 
 <bean id="pais" class="com.roloapps.beans.Pais">
 	<property name="nombre" value="Chile"></property>
-	<property name="ciudad"> <!-- Dentro de Property igual que arriba, 2 maneras de hacerlo -->
-		<bean id="ciudad" class="com.roloapps.beans.Ciudad">
-			<property name="nombre" value="Santiago"></property>
-		</bean>
+	<property name="ciudades"> <!-- Dentro de Property igual que arriba, 2 maneras de hacerlo -->
+	<list>
+	<ref bean="ciudad1"/>
+	<ref bean="ciudad2"/>
+	<ref bean="ciudad3"/>
+	</list>
 	</property>
 </bean>
 
-
+	<bean id="ciudad1" class="com.roloapps.beans.Ciudad">
+	<property name="nombre" value="Arauco"></property>
+	</bean>
+	
+	<bean id="ciudad2" class="com.roloapps.beans.Ciudad">
+	<property name="nombre" value="Concepcion"></property>
+	</bean>
+	
+	<bean id="ciudad3" class="com.roloapps.beans.Ciudad">
+	<property name="nombre" value="Santiago"></property>
+	</bean>
 
 </beans>
