@@ -3,8 +3,16 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<!--
 <bean id="mundi" class="com.roloapps.beans.Mundo">
 <property name="first" value="Prueba_one"></property>
+</bean>
+-->
+
+<bean id="persona" class="com.roloapps.beans.Persona">
+<constructor-arg value="354"></constructor-arg>
+<constructor-arg value="Rolo"></constructor-arg>
+<constructor-arg value="RoloApps"></constructor-arg>
 </bean>
 
 </beans>
