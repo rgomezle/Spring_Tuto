@@ -17,7 +17,8 @@ public class App {
 		ApplicationContext AppContext = new ClassPathXmlApplicationContext("com/roloapps/xml/beans.xml");
 		Persona per = (Persona) AppContext.getBean("persona");		
 		((ConfigurableApplicationContext)AppContext).close();
-		System.out.println(per.getId()+" "+per.getNombre()+" "+per.getApodo());
+		System.out.println(per.getId()+" "+per.getNombre()+" "+
+		per.getApodo()+" "+per.getPais().getNombre()+" "+per.getPais().getCiudad().getNombre());
 		
 		/*
 		ApplicationContext AppContext = new ClassPathXmlApplicationContext("com/roloapps/xml/beans.xml");

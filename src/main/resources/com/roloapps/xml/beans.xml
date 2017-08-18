@@ -8,11 +8,31 @@
 <property name="first" value="Prueba_one"></property>
 </bean>
 -->
-
+<!--
 <bean id="persona" class="com.roloapps.beans.Persona">
 <constructor-arg value="354"></constructor-arg>
 <constructor-arg value="Rolo"></constructor-arg>
 <constructor-arg value="RoloApps"></constructor-arg>
+<property name="pais" ref="pais"></property>
 </bean>
+-->
+
+<bean id="persona" class="com.roloapps.beans.Persona">
+<property name="pais" ref="pais"></property>
+<property name="id" value="1"></property>
+<property name="nombre" value="Rolo"></property>
+<property name="apodo" value="RoloApps"></property>
+</bean>
+
+<bean id="pais" class="com.roloapps.beans.Pais">
+	<property name="nombre" value="Chile"></property>
+	<property name="ciudad"> <!-- Dentro de Property igual que arriba, 2 maneras de hacerlo -->
+		<bean id="ciudad" class="com.roloapps.beans.Ciudad">
+			<property name="nombre" value="Santiago"></property>
+		</bean>
+	</property>
+</bean>
+
+
 
 </beans>
