@@ -14,6 +14,14 @@ public class Persona {
 	}
 	*/
 
+	public void initBean(){
+		System.out.println("Inicio Bean");
+		}
+	
+	public void destroyBean(){
+		System.out.println("Fin de Bean");
+		}
+	
 	public Pais getPais() {
 		return pais;
 	}

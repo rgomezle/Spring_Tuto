@@ -2,11 +2,11 @@ package com.roloapps.spring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+//import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.roloapps.beans.Ciudad;
-import com.roloapps.beans.AppConfig;
-import com.roloapps.beans.Mundo;
+//import com.roloapps.beans.AppConfig;
+//import com.roloapps.beans.Mundo;
 import com.roloapps.beans.Persona;
 
 public class App {

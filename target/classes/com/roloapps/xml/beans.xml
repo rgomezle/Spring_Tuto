@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-init-method="initBean" default-destroy-method="destroyBean"
+	>
 
 <!--
 <bean id="mundi" class="com.roloapps.beans.Mundo">
@@ -17,6 +19,9 @@
 </bean>
 -->
 
+<!-- <bean id="persona" class="com.roloapps.beans.Persona" autowire="byName" scope="singleton" lazy-init="true"> -->
+<!-- Singleton viene por defecto, instancia el mismo objeto, con prototype son distintos objetos -->
+<!-- Lazy init solo invoca en App.java cuando sea requerida en getBean, no cuando se crea la app -->
 <bean id="persona" class="com.roloapps.beans.Persona">
 <property name="pais" ref="pais"></property>
 <property name="id" value="1"></property>
