@@ -1,26 +1,31 @@
 package com.roloapps.beans;
 
+import javax.annotation.*;
+
 public class Persona {
 	private int id;
 	private String nombre;
 	private String apodo;
 	private Pais pais;	
+	private Ciudad ciudad;
 	
-	/*
-	public Persona (int id, String nombre, String apodo){
-		this.id=id;
-		this.nombre=nombre;
-		this.apodo=apodo;			
-	}
-	*/
-
+	@PostConstruct
 	public void initBean(){
-		System.out.println("Inicio Bean");
+		System.out.println("Creado bean");
 		}
 	
+	@PreDestroy
 	public void destroyBean(){
-		System.out.println("Fin de Bean");
+		System.out.println("Destruido Bean");
 		}
+	
+	public Ciudad getCiudad() {
+		return ciudad;
+	}
+
+	public void setCiudad(Ciudad ciudad) {
+		this.ciudad = ciudad;
+	}
 	
 	public Pais getPais() {
 		return pais;
