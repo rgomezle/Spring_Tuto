@@ -1,15 +1,20 @@
 package com.roloapps.beans;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class Pais {
 
 	private String nombre;
 
+	@PostConstruct
 	public void initBean(){
-		System.out.println("Inicio Bean");
+		System.out.println("Creado bean");
 		}
 	
+	@PreDestroy
 	public void destroyBean(){
-		System.out.println("Fin de Bean");
+		System.out.println("Destruido Bean");
 		}
 	
 	public String getNombre() {

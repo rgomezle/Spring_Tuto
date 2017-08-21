@@ -1,8 +1,12 @@
 package com.roloapps.beans;
 
-import javax.annotation.*;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
-public class Persona {
+import org.springframework.beans.factory.InitializingBean;
+
+public class Persona implements InitializingBean{
+	
 	private int id;
 	private String nombre;
 	private String apodo;
@@ -57,6 +61,12 @@ public class Persona {
 
 	public void setApodo(String apodo) {
 		this.apodo = apodo;
+	}
+
+	//@Override - Corregir
+	public void afterPropertiesSet() throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
