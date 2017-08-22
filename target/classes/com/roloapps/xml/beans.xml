@@ -10,6 +10,6 @@
 </bean>
 
 <bean id="barcelona" class="com.roloapps.beans.Barcelona"></bean>
-
+<bean id="juventus" class="com.roloapps.beans.Juventus"></bean>
 	
 </beans>
