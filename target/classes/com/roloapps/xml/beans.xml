@@ -3,18 +3,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean class="com.roloapps.beans.roloappsBeanPostProcessor"></bean>
-
-<bean id="persona" class="com.roloapps.beans.Persona" autowire="byName">
-<property name="apodo" value="RoloApps"></property>
+<bean id="messi" class="com.roloapps.beans.Jugador">
+<property name="numero" value="10"></property>
+<property name="nombre" value="Lionel Messi"></property>
+	<property name="equipo" ref="barcelona"></property>
 </bean>
 
-<bean id="pais" class="com.roloapps.beans.Pais">
-	<property name="nombre" value="Chile"></property>
-</bean>
+<bean id="barcelona" class="com.roloapps.beans.Barcelona"></bean>
 
-	<bean id="ciudad" class="com.roloapps.beans.Ciudad">
-	<property name="nombre" value="Arauco"></property>
-	</bean>
 	
 </beans>

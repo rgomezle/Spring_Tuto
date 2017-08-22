@@ -5,6 +5,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.roloapps.beans.Ciudad;
+import com.roloapps.beans.Jugador;
 import com.roloapps.beans.Persona;
 
 public class App {
@@ -12,23 +13,15 @@ public class App {
 	public static void main(String[] args) {
 		
 		
-		ApplicationContext AppContext = new ClassPathXmlApplicationContext("com/roloapps/xml/beans.xml");
+		ApplicationContext AppContext = 
+				new ClassPathXmlApplicationContext("com/roloapps/xml/beans.xml");
 		
-		Persona per = (Persona) AppContext.getBean("persona");	
+		Jugador jug = (Jugador) AppContext.getBean("messi");	
 		
-		Ciudad ciu = (Ciudad) AppContext.getBean("ciudad");
-		
-		System.out.println("\n"+"Apodo: "+per.getApodo());
-		System.out.println("Ciudad: "+ciu.getNombre());
-		
-		/*
-		per.setId(1);
-		per.setNombre("Rolo");
-		System.out.println(per.getId()+" "+per.getNombre()+" "+per.getApodo()+" "+per.getPais().getNombre()+" "+per.getCiudad().getNombre()    );
-	    */		
+		System.out.println(jug.getNombre()+" - "+jug.getEquipo().mostrar());
+			
 		((ConfigurableApplicationContext)AppContext).close();
-				
-	
+
 	}
 
 }
