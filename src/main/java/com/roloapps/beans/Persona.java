@@ -1,11 +1,9 @@
 package com.roloapps.beans;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-
+import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class Persona implements InitializingBean{
+public class Persona implements InitializingBean, DisposableBean{
 	
 	private int id;
 	private String nombre;
@@ -13,6 +11,8 @@ public class Persona implements InitializingBean{
 	private Pais pais;	
 	private Ciudad ciudad;
 	
+	
+	/*
 	@PostConstruct
 	public void initBean(){
 		System.out.println("Creado bean");
@@ -22,7 +22,7 @@ public class Persona implements InitializingBean{
 	public void destroyBean(){
 		System.out.println("Destruido Bean");
 		}
-	
+	*/
 	public Ciudad getCiudad() {
 		return ciudad;
 	}
@@ -63,12 +63,17 @@ public class Persona implements InitializingBean{
 		this.apodo = apodo;
 	}
 
-	//@Override - Corregir
-	public void afterPropertiesSet() throws Exception {
-		// TODO Auto-generated method stub
+	
+	public void destroy() throws Exception {
+	
+		System.out.print("antes de destruirlo");
 		
 	}
 
-	
+	public void afterPropertiesSet() throws Exception {
+		
+		System.out.print("Antes de iniciar el bean" + "\n");
+		
+	}
 	
 }
