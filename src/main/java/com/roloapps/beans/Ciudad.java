@@ -6,7 +6,7 @@ import javax.annotation.PreDestroy;
 public class Ciudad {
 
 	private String nombre;
-	
+	/*
 	@PostConstruct
 	public void initBean(){
 		System.out.println("Creado bean");
@@ -16,6 +16,7 @@ public class Ciudad {
 	public void destroyBean(){
 		System.out.println("Destruido Bean");
 		}
+		*/
 	public String getNombre() {
 		return nombre;
 	}

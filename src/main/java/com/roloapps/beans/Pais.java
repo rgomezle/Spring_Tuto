@@ -7,6 +7,7 @@ public class Pais {
 
 	private String nombre;
 
+	
 	@PostConstruct
 	public void initBean(){
 		System.out.println("Creado bean");

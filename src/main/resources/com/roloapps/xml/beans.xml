@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<bean class="com.roloapps.beans.roloappsBeanPostProcessor"></bean>
 
 <bean id="persona" class="com.roloapps.beans.Persona" autowire="byName">
 <property name="apodo" value="RoloApps"></property>
