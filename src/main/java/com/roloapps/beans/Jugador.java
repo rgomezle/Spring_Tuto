@@ -1,12 +1,18 @@
 package com.roloapps.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import com.roloapps.interfaces.Equipo;
 
 public class Jugador {
 
 private int id;
 private String nombre;
+@Autowired
+@Qualifier("barcelona")
 private Equipo equipo;
+@Autowired
 private Camiseta camiseta;
 
 

@@ -1,5 +1,8 @@
 package com.roloapps.beans;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Marca {
 
 	private int id;
@@ -18,6 +21,5 @@ public class Marca {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
 	
 }

@@ -5,30 +5,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
+<context:component-scan base-package="com.roloapps"></context:component-scan>
 
 <bean name="jugador" class="com.roloapps.beans.Jugador">
 <property name="id" value="3"></property>
 <property name="nombre" value="messi"></property>
-<property name="equipo" ref="barcelona"></property>
-<property name="camiseta" ref="camiseta"></property>
 </bean>
 
-
-<bean id="barcelona" class="com.roloapps.beans.Barcelona">
-</bean>
-
-<bean id="juventus" class="com.roloapps.beans.Juventus">
-</bean>
-	
-<bean name="camiseta" class="com.roloapps.beans.Camiseta">
-<property name="id" value="3"></property>
-<property name="numero" value="10"></property>
-<property name="marca" ref="marca"></property>
-</bean>	
-	
-<bean name="marca" class="com.roloapps.beans.Marca">
-<property name="id" value="3"></property>
-<property name="nombre" value="Adidas"></property>
-</bean>	
-	
 </beans>
