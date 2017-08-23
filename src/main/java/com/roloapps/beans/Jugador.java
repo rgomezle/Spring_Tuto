@@ -1,6 +1,8 @@
 package com.roloapps.beans;
 
-import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+//import org.springframework.beans.factory.annotation.Required;
 
 import com.roloapps.interfaces.Equipo;
 
@@ -8,6 +10,8 @@ public class Jugador {
 
 	private int numero;
 	private String nombre;
+	@Autowired
+	@Qualifier("juventusQ")
 	private Equipo equipo;
 	
 	public int getNumero() {
@@ -25,7 +29,7 @@ public class Jugador {
 	public Equipo getEquipo() {
 		return equipo;
 	}
-	@Required
+	//@Required
 	public void setEquipo(Equipo equipo) {
 		this.equipo = equipo;
 	}
