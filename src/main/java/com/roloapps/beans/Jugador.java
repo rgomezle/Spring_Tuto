@@ -1,5 +1,7 @@
 package com.roloapps.beans;
 
+import org.springframework.beans.factory.annotation.Required;
+
 import com.roloapps.interfaces.Equipo;
 
 public class Jugador {
@@ -23,6 +25,7 @@ public class Jugador {
 	public Equipo getEquipo() {
 		return equipo;
 	}
+	@Required
 	public void setEquipo(Equipo equipo) {
 		this.equipo = equipo;
 	}
