@@ -2,16 +2,19 @@ package com.roloapps.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-//import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import com.roloapps.interfaces.Equipo;
 
+@Component("messi")
 public class Jugador {
 
 	private int numero;
+	@Value("Lionel Messi")
 	private String nombre;
-	@Autowired
-	@Qualifier("juventusQ")
+	@Autowired //tiene byType por defecto
 	private Equipo equipo;
 	
 	public int getNumero() {

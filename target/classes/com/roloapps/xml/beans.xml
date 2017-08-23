@@ -5,18 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
-<context:annotation-config/>
 
-<bean id="messi" class="com.roloapps.beans.Jugador">
-<property name="numero" value="10"></property>
-<property name="nombre" value="Lionel Messi"></property>
-</bean>
-
-<bean id="barcelona" class="com.roloapps.beans.Barcelona">
-<qualifier value="barcelonaQ"></qualifier>
-</bean>
-<bean id="juventus" class="com.roloapps.beans.Juventus">
-<qualifier value="juventusQ"></qualifier>
-</bean>
+<context:component-scan base-package="com.roloapps"></context:component-scan>
 	
 </beans>
