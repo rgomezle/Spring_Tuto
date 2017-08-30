@@ -1,7 +1,6 @@
 package com.roloapps.beans;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+
 
 public class Ciudad {
 

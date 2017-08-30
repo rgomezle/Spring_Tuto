@@ -2,12 +2,14 @@ package com.roloapps.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 
 import com.roloapps.interfaces.Equipo;
 
 public class Jugador {
 
 private int id;
+@Value("Rolo")
 private String nombre;
 @Autowired
 @Qualifier("barcelona")

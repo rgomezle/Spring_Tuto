@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.roloapps.beans.Barcelona;
@@ -20,7 +21,7 @@ public class App {
 		int respuesta = sc.nextInt();
 		
 		ApplicationContext AppContext = 
-				new ClassPathXmlApplicationContext("com/roloapps/xml/beans.xml");
+				new AnnotationConfigApplicationContext(AppConfig.class);
 		Jugador jug = (Jugador) AppContext.getBean("jugador");	
 	
 		switch (respuesta) {
