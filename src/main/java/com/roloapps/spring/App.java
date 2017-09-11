@@ -35,7 +35,6 @@ public class App {
 	
 		}
 		
-
 		System.out.println("Nombre: "+jug.getNombre()+"\nEquipo: "+jug.getEquipo().mostrar()+
 				"\nCamiseta: "+jug.getCamiseta().getMarca().getNombre()+
 				"\nNumero :"+jug.getCamiseta().getNumero());
